@@ -83,17 +83,20 @@ var myName = function(name) {
 var newMyName = myName('Paige');
 alert(newMyName);
 
-//Now alert the result of invoking newMyName
-
-
-
 //Next problem
 
 
 
 //Create a function called outerFn which returns an anonymous function which returns your name.
 
-  //Code Here
+var outerFn = function(name) {
+	return function() {
+		return name;
+	};
+	
+}
+var innerFN = outerFn('Paige');
+innerFN();
 
 //Now save the result of invoking outerFn into a variable called innerFn.
 
