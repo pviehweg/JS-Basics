@@ -165,13 +165,16 @@ counter();
 
 //Next Problem
 
-var funcArray = [0, 1, 2, 3, 4, 5]
 
-funcArray[0]();
+var funcArray = [];        
+for( var i = 0; i < 6; i++ ){
+    (function( i ){
+        funcArray.push( 
+            function(){ console.log( i ); } 
+        );
+    })( i );
+}
 
-
-/*
-  Make the following code work
 
   funcArray[0]() //0
   funcArray[1]() //1
@@ -180,7 +183,5 @@ funcArray[0]();
   funcArray[4]() //4
   funcArray[5]() //5
 
-  *Hint: Don't let this fool you. Break down what's really happening here.
-*/
-
+  
 
