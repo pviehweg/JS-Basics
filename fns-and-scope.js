@@ -2,11 +2,10 @@
 
 
 var name = 'Tyler';
-
 //Create a function called isTyler that accepts name as it's only parameter.
 //If the argument you passed in is equal to 'Tyler', return true. If it's not, return false.
 
-var isTyler = function(name) {
+ var isTyler = function(name) {
 	if (name === 'Tyler') {
 		return true;
     }
@@ -17,12 +16,12 @@ var isTyler = function(name) {
 
 isTyler('Tyler')
 
-
 //Next problem
 
 
 
 //Create a function called getName that uses prompt() to prompt the user for their name, then returns the name.
+
 
 var getName = function() {
 	var superAwesome = prompt('What is your Name');
@@ -30,6 +29,7 @@ var getName = function() {
 }
 
 getName();
+
 
 //Next Problem
 
@@ -40,18 +40,27 @@ getName();
 
 var getName = function() {
 	var superAwesome = prompt('What is your Name');
-	alert('Welcome ' + superAwesome);
+	return superAwesome;
 }
 
-getName();
+var welcome = function() {
+	getName();
+	var name = getName();
+	alert('Welcome, ' + name );
+}
+
+welcome();
 
 
 //Next problem
 
 
+
+
 //What is the difference between arguments and parameters?
 
- // Argument is what you call. It can change. Paramaters are built into the function. They cannot be changed once the function has been written.  
+//Argument is what you call. It can change. Paramaters are built into the function. They cannot be changed once the function has been written.  
+
 
 
 //Next problem
@@ -60,7 +69,10 @@ getName();
 
 //What are all the falsy values in JavaScript and how do you check if something is falsy?
 
+
 //false undefined null NaN '' 0
+
+
 
 //Next Problem
 
@@ -68,20 +80,18 @@ getName();
 
 //Create a function called myName that returns your name
 
-var myName = function(name) {
+var myName = function() {
 	return name;
 }
-myName('Paige')
-  
-
 
 //Now save the function definition of myName into a new variable called newMyName
 
-var myName = function(name) {
-	return name;
-}
-var newMyName = myName('Paige');
-alert(newMyName);
+
+//Now alert the result of invoking newMyName
+var newMyName = myName;
+
+alert(newMyName());
+
 
 //Next problem
 
@@ -91,15 +101,14 @@ alert(newMyName);
 
 var outerFn = function(name) {
 	return function() {
-		return name;
-	};
-	
+		return 'name';
+	};	
 }
-var innerFN = outerFn('Paige');
-innerFN();
 
 //Now save the result of invoking outerFn into a variable called innerFn.
 
-  //Code Here
+var innerFn = outerFn('Paige');
 
 //Now invoke innerFn.
+
+innerFn();
