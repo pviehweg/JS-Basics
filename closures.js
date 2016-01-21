@@ -114,10 +114,10 @@ var fnCounter = function(N) {
  }
  
  var fnRunner = fnCounter(10)
- fnRunner(10);
+ fnRunner(10); 
+ 
 
 //Next Problem
-
 
 
 /*
@@ -165,23 +165,38 @@ counter();
 
 //Next Problem
 
-
-var funcArray = [];        
-for( var i = 0; i < 6; i++ ){
-    (function( i ){
-        funcArray.push( 
-            function(){ console.log( i ); } 
-        );
-    })( i );
+var zero = function() {
+  return 0;
 }
 
+var one = function() {
+  return 1;
+}
 
-  funcArray[0]() //0
-  funcArray[1]() //1
-  funcArray[2]() //2
-  funcArray[3]() //3
-  funcArray[4]() //4
-  funcArray[5]() //5
+var two = function() {
+  return 2;
+}
+
+var three = function() {
+  return 3;
+}
+
+var four = function() {
+  return 4;
+}
+
+var five = function() {
+  return 5;
+}
+
+var funcArray = [zero, one, two, three, four, five]
+
+ // funcArray[0]() //0
+ // funcArray[1]() //1
+ // funcArray[2]() //2
+ // funcArray[3]() //3
+ // funcArray[4]() //4
+ // funcArray[5]() //5
 
   
 
